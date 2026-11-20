@@ -1,0 +1,620 @@
+[
+  {
+    "category": "Agriculture, Forestry & Fisheries",
+    "designations": [
+      "Agri. Extension Officer",
+      "Agronomist",
+      "Aquaculturist / Fisheries",
+      "Dairy / Poultry Farmer",
+      "Environmental Consultant",
+      "Farmer / Cultivator",
+      "Fisheries Manager",
+      "Fish Trader / Fishmonger",
+      "Forestry Specialist",
+      "Horticulturist",
+      "Tea Garden Manager / Planter",
+      "Jute Worker",
+      "Veterinarian"
+    ]
+  },
+  {
+    "category": "Architecture & Planning",
+    "designations": [
+      "Architect",
+      "Building Inspector",
+      "Construction Planner",
+      "Heritage Conservation Spec.",
+      "Interior Architect",
+      "Landscape Architect",
+      "Regional Planner",
+      "Sustainable Design Cons.",
+      "Town Planner",
+      "Urban Planner"
+    ]
+  },
+  {
+    "category": "Aviation & Aerospace",
+    "designations": [
+      "Aerospace Engineer",
+      "Aeronautical Engineer",
+      "Air Traffic Controller",
+      "Aircraft Maintenance Engineer",
+      "Aircraft Maintenance Tech",
+      "Airline Pilot",
+      "Airport Manager",
+      "Airport Ops Manager",
+      "Aviation Safety Inspector",
+      "Avionics Technician",
+      "Cabin Crew / Flight Attendant",
+      "Commercial Pilot",
+      "Flight Attendant",
+      "Flight Engineer",
+      "Flight Instructor",
+      "Ground Operations Officer",
+      "Helicopter Pilot"
+    ]
+  },
+  {
+    "category": "Banking, Finance & Accounting",
+    "designations": [
+      "Accountant",
+      "Actuary",
+      "Auditor",
+      "Bank Manager / Officer",
+      "Bankkeeper",
+      "Budget Analyst",
+      "Cashier / Teller",
+      "Chartered Accountant (CA)",
+      "Chief Financial Officer (CFO)",
+      "Compliance Officer",
+      "Cost Estimator",
+      "Financial Analyst",
+      "Financial Manager",
+      "Insurance Agent / Consultant",
+      "Investment Banker",
+      "Investment Manager",
+      "Loan / Credit Officer",
+      "Personal Financial Advisor",
+      "Risk Manager",
+      "Stock Broker",
+      "Tax Consultant",
+      "Tax Examiner"
+    ]
+  },
+  {
+    "category": "Business & Entrepreneurship",
+    "designations": [
+      "Business Analyst",
+      "Business Owner / Entrepreneur",
+      "Chief Executive Officer (CEO)",
+      "Director / Board Member",
+      "General Manager"
+    ]
+  },
+  {
+    "category": "Management & Operations",
+    "designations": [
+      "COO (Chief Ops Officer)",
+      "CTO (Chief Tech Officer)",
+      "Claims Adjuster",
+      "IT Systems Manager",
+      "Management Analyst",
+      "Management Consultant",
+      "Marketing Manager",
+      "Health Services Manager",
+      "Natural Sciences Manager",
+      "Operations Manager",
+      "Project Manager",
+      "Sales Manager",
+      "Community Service Manager"
+    ]
+  },
+  {
+    "category": "Administration & Office Support",
+    "designations": [
+      "Administrative Assistant",
+      "Administrative Services Manager",
+      "Bookkeeper",
+      "HR Manager",
+      "HR Specialist",
+      "Office Clerk",
+      "Purchasing Agent",
+      "Receptionist"
+    ]
+  },
+  {
+    "category": "Creative Arts & Design",
+    "designations": [
+      "Animator",
+      "Art Director",
+      "Artist (Painter, Sculptor, etc.)",
+      "Fashion Designer",
+      "Fine Artist / Painter",
+      "Graphic Designer",
+      "Interior Designer",
+      "Photographer",
+      "Video Editor / Producer",
+      "Videographer"
+    ]
+  },
+  {
+    "category": "Media & Broadcasting",
+    "designations": [
+      "Actor / Actress",
+      "Author / Writer",
+      "Broadcaster / RJ",
+      "Content Creator",
+      "Copywriter",
+      "Creative Director",
+      "Dancer",
+      "Endorser",
+      "Film Director",
+      "Journalist / Reporter",
+      "Model",
+      "Musician / Singer",
+      "News Anchor",
+      "PR Specialist",
+      "Radio Jockey",
+      "Sound Engineer",
+      "Technical Writer",
+      "Translator"
+    ]
+  },
+  {
+    "category": "Engineering & Architecture",
+    "designations": [
+      "Agricultural Engineer",
+      "Automotive Engineer",
+      "Biomedical Engineer",
+      "Chemical Engineer",
+      "Civil Engineer",
+      "Computer Hardware Engineer",
+      "Electrical Engineer",
+      "Electronics Engineer",
+      "Environmental Engineer",
+      "Industrial Engineer",
+      "Marine Engineer",
+      "Materials Engineer",
+      "Mechanical Engineer",
+      "Mechatronics Engineer",
+      "Mining and Geological Engineer",
+      "Network Engineer",
+      "Nuclear Engineer",
+      "Petroleum & Mining Engineer",
+      "Petroleum Engineer",
+      "Production Engineer",
+      "Quality Assurance Engineer",
+      "Robotics Engineer",
+      "Software Engineer",
+      "Structural Engineer",
+      "Water Resources Engineer"
+    ]
+  },
+  {
+    "category": "Garments, Textile & Buying House",
+    "designations": [
+      "Garment Factory Worker",
+      "Garments Production Manager",
+      "Leather/Tannery Worker",
+      "Merchandiser",
+      "Pattern Maker",
+      "Quality Controller (QC)",
+      "Textile Designer",
+      "Textile Engineer"
+    ]
+  },
+  {
+    "category": "Government, Defense & Public Service",
+    "designations": [
+      "Administrator Officer",
+      "BCS Cadre (Administration)",
+      "BCS Cadre (Customs & Excise)",
+      "BCS (Foreign Affairs)",
+      "BCS Cadre (Police)",
+      "BCS Cadre (Tax)",
+      "BCS Cadre (Other)",
+      "Civil Servant",
+      "Civil Servant (General)",
+      "Defense Officer",
+      "Diplomat",
+      "Fire Service Officer",
+      "Firefighter",
+      "First Class Gazetted Officer",
+      "Foreign Service Officer",
+      "Legislator",
+      "Magistrate",
+      "Military Officer",
+      "Municipal Officer",
+      "Non-Cadre Government Officer",
+      "Police Officer",
+      "Postmaster",
+      "Public Administrator",
+      "Public Health Official",
+      "Public Policy Analyst",
+      "Revenue Officer"
+    ]
+  },
+  {
+    "category": "Healthcare & Medicine",
+    "designations": [
+      "Anesthesiologist",
+      "Audiologist",
+      "Ayurvedic/Homeopathic Doc",
+      "Cardiologist",
+      "Chiropractor",
+      "Clinical Psychologist",
+      "Dentist",
+      "Dermatologist",
+      "Dietitian",
+      "EMT (Emergency Medical)",
+      "General Practitioner (MBBS)",
+      "Geneticist",
+      "Home Health Aide",
+      "Medical Assistant / Paramedic",
+      "Medical Laboratory Technician",
+      "Med Lab Technologist",
+      "Medical Officer",
+      "Mental Health Counselor",
+      "Neurologist",
+      "Nurse",
+      "Nurse Practitioner",
+      "Nutritionist / Dietitian",
+      "Occupational Therapist",
+      "Optometrist",
+      "Orthopedic Surgeon",
+      "Paramedic",
+      "Pediatrician",
+      "Pharmacist",
+      "Physiotherapist",
+      "Psychiatrist",
+      "Psychologist",
+      "Public Health Specialist",
+      "Radiologist",
+      "Radiologic Technologist",
+      "Registered Nurse",
+      "Respiratory Therapist",
+      "Speech Pathologist",
+      "Speech Therapist",
+      "Specialist Physician",
+      "Surgeon",
+      "Surgical Technologist",
+      "Veterinarian"
+    ]
+  },
+  {
+    "category": "Medical Research & Pharmaceuticals",
+    "designations": [
+      "Clinical Research Associate",
+      "Medical Laboratory Technician",
+      "Pharmaceutical Researcher"
+    ]
+  },
+  {
+    "category": "Hospitality, Travel & Tourism",
+    "designations": [
+      "Baker",
+      "Bartender",
+      "Barista",
+      "Butcher",
+      "Chef / Executive Cook",
+      "Concierge",
+      "Event Manager",
+      "Food Service Worker",
+      "Hotel / Resort Manager",
+      "Lodging Manager",
+      "Restaurant Manager",
+      "Restaurateur / Cafe Owner",
+      "Sommelier",
+      "Tour Guide",
+      "Travel Agent"
+    ]
+  },
+  {
+    "category": "Information Technology (IT) & Software",
+    "designations": [
+      "AI/ML Engineer",
+      "Blockchain Developer",
+      "Cloud Architect",
+      "Cloud Engineer",
+      "Computer Programmer",
+      "Cybersecurity Analyst",
+      "Database Administrator",
+      "Data Scientist / Analyst",
+      "DevOps Engineer",
+      "Full Stack Developer",
+      "Game Developer",
+      "IT Administrator",
+      "IT Project Manager",
+      "IT Support Specialist",
+      "Security Analyst",
+      "QA Engineer",
+      "Site Reliability Engineer",
+      "Software Engineer",
+      "System Administrator",
+      "Telecom Engineer",
+      "Telecom Technician",
+      "UX/UI Designer",
+      "Web Developer"
+    ]
+  },
+  {
+    "category": "Legal & Law Enforcement",
+    "designations": [
+      "Advocate / Lawyer",
+      "Animal Control Worker",
+      "Arbitrator",
+      "Barrister",
+      "Corporate Legal Advisor",
+      "Corporate Lawyer",
+      "Court Reporter",
+      "Criminal Defense Attorney",
+      "Criminal Lawyer",
+      "Detective",
+      "Fish and Game Warden",
+      "Forensic Expert",
+      "Forensic Scientist",
+      "Judge",
+      "Justice",
+      "Law Enforcement Officer",
+      "Lawyer",
+      "Legal Assistant",
+      "Legal Advisor",
+      "Notary Public",
+      "Paralegal",
+      "Private Investigator",
+      "Security Guard",
+      "Security Officer",
+      "Supreme Court Lawyer"
+    ]
+  },
+  {
+    "category": "Logistics & Transportation",
+    "designations": [
+      "Bus Driver",
+      "Commercial Driver / Chauffeur",
+      "Courier",
+      "Delivery Driver",
+      "Fleet Manager",
+      "Freight / Stock Material Mover",
+      "Logistics Coordinator",
+      "Logistics Manager",
+      "Marine Captain / Ship Master",
+      "Merchant Navy Officer",
+      "Shipbreaker",
+      "Port Manager",
+      "Railroad Conductor",
+      "Supply Chain Manager",
+      "Supply Chain Analyst",
+      "Supply Chain Executive",
+      "Taxi Driver",
+      "Train Engineer",
+      "Truck Driver",
+      "Warehouse Manager"
+    ]
+  },
+  {
+    "category": "NGO, Development & Social Work",
+    "designations": [
+      "Career Counselor",
+      "Childcare Worker",
+      "Community Health Worker",
+      "Community Service Manager",
+      "Development Consultant",
+      "M&E Officer",
+      "NGO Executive / Director",
+      "Personal Care Aide",
+      "Domestic Helper / Housemaid",
+      "Program / Project Coordinator",
+      "Recreation Worker",
+      "Religious Leader (Clergy)",
+      "School Counselor",
+      "Social Worker",
+      "Substance Abuse Counselor",
+      "UN/International Agency"
+    ]
+  },
+  {
+    "category": "Real Estate, Construction & Property",
+    "designations": [
+      "Appraiser",
+      "Contractor / Builder",
+      "Facilities Manager",
+      "Land Surveyor",
+      "Property Consultant",
+      "Property Manager",
+      "Real Estate Agent",
+      "Real Estate Developer",
+      "Valuer / Appraiser"
+    ]
+  },
+  {
+    "category": "Science & Research",
+    "designations": [
+      "Anthropologist",
+      "Archaeologist",
+      "Astronomer",
+      "Atmospheric Scientist",
+      "Biochemist",
+      "Biologist",
+      "Chemist",
+      "Environmental Scientist",
+      "Food Scientist",
+      "Forensic Scientist",
+      "Geneticist",
+      "Geologist",
+      "Historian",
+      "Laboratory Technician",
+      "Microbiologist",
+      "Meteorologist",
+      "Oceanographer",
+      "Physicist",
+      "Political Scientist",
+      "Research Assistant",
+      "Research Fellow / Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "category": "Analytics & Statistics",
+    "designations": [
+      "Economist",
+      "Statistician"
+    ]
+  },
+  {
+    "category": "Teaching, Education & Academia",
+    "designations": [
+      "Academic Counselor",
+      "Adult Education Teacher",
+      "Tech Education Teacher",
+      "College Lecturer",
+      "Curriculum Developer",
+      "Education Administrator",
+      "Educational Consultant",
+      "ESL Instructor",
+      "Headmaster / Principal",
+      "High School Teacher",
+      "Kindergarten Teacher",
+      "Library Technician",
+      "Librarian",
+      "Madrasa Teacher / Scholar",
+      "Primary School Teacher",
+      "Private Tutor",
+      "Professor",
+      "Researcher",
+      "School Principal",
+      "Secondary Teacher",
+      "Special Education Teacher",
+      "Teacher Assistant",
+      "University Professor"
+    ]
+  },
+  {
+    "category": "Skilled Trades & Services",
+    "designations": [
+      "Automotive Mechanic",
+      "Avionics Technician",
+      "Calibration Technician",
+      "Carpenter",
+      "Cabinetmaker",
+      "Equipment Operator",
+      "Construction Laborer",
+      "Diesel Mechanic",
+      "Drafter",
+      "Electrician",
+      "Foreman / Supervisor",
+      "Hair Stylist / Barber",
+      "Heavy Vehicle Mech.",
+      "HVAC Technician",
+      "Janitor",
+      "Landscaping Laborer",
+      "Lift Technician",
+      "Machinist",
+      "Makeup Artist",
+      "Mason",
+      "Motorcycle Mechanic",
+      "Painter",
+      "Plumber",
+      "Refrigeration Tech",
+      "Sheet Metal Worker",
+      "Steel / Metal Worker",
+      "Small Engine Mech.",
+      "Solar Panel Install.",
+      "Tailor",
+      "Tool & Die Maker",
+      "Welder"
+    ]
+  },
+  {
+    "category": "Sales & Customer Service",
+    "designations": [
+      "Ad Sales Agent",
+      "Call Center Rep",
+      "Cashier",
+      "Customer Service Rep",
+      "Demonstrator",
+      "Financial Sales Agent",
+      "Retail Salesperson",
+      "Sales Agent",
+      "Sales Manager",
+      "Sales Representative",
+      "Telemarketer"
+    ]
+  },
+  {
+    "category": "Sports & Fitness",
+    "designations": [
+      "Athlete",
+      "Coach",
+      "Fitness Trainer",
+      "Gym Manager",
+      "Personal Trainer",
+      "Professional Athlete",
+      "Referee",
+      "Sports Analyst",
+      "Sports Physiotherapist",
+      "Yoga Instructor"
+    ]
+  },
+  {
+    "category": "Informal & Self-Employment",
+    "designations": [
+      "Street Vendor",
+      "Shop Owner",
+      "Cart/Van Driver",
+      "Day Laborer",
+      "Handcraft Worker",
+      "Artisan",
+      "Freelancer",
+      "Entrepreneur",
+      "Self-Employed",
+      "Consultant",
+      "Investor"
+    ]
+  },
+  {
+    "category": "Other Career States",
+    "designations": [
+      "Student",
+      "Seeking Employment",
+      "Retired",
+      "Retired Professional",
+      "Housewife",
+      "Volunteer",
+      "Unemployed",
+      "Other (Specify)"
+    ]
+  },
+  {
+    "category": "Emerging & Specialized Roles",
+    "designations": [
+      "Drone Operator",
+      "Genetic Counselor",
+      "Social Media Influencer",
+      "Solar Installer",
+      "Sustainability Spec.",
+      "UX Researcher",
+      "Virtual Assistant",
+      "Remote Assistant",
+      "Wind Turbine Tech."
+    ]
+  },
+  {
+    "category": "Supporting & Miscellaneous",
+    "designations": [
+      "Recreation Attendant",
+      "Bill Collector",
+      "Cleaner",
+      "Correctional Officer",
+      "Dispatcher",
+      "Dishwasher",
+      "Interpreter",
+      "Mail Carrier",
+      "Packer & Handler",
+      "Postal Clerk",
+      "Receiving Clerk",
+      "Stock Clerk",
+      "Waiter / Waitress"
+    ]
+  }
+]

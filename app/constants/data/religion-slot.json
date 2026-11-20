@@ -1,0 +1,23 @@
+[
+  [
+    { "label": "Religion", "value": "Muslim" },
+    { "label": "Religious Views", "value": "Practicing" },
+    { "label": "Sect", "value": "Sunni" },
+    { "label": "Maintains five times prayer", "value": "Yes" }
+  ],
+  [
+    { "label": "Beard/Hijab", "value": "Yes" },
+    { "label": "Maintains Mahram/Non-mahram", "value": "Yes" },
+    { "label": "Able to read Quran", "value": "Yes" },
+    { "label": "Follows Pir/Mazar", "value": "No" }
+  ],
+  [
+    { "label": "Thoughts on Pir/Mazar", "value": "N/A" },
+    { "label": "Dress outside home", "value": "Sunnah Dress" },
+    { "label": "Converted from another religion?", "value": "Yes" },
+    {
+      "label": "Reason of conversion",
+      "value": "Because of my family issues and I like Muslim religion, I fear Allah and loves His mercy on His"
+    }
+  ]
+]

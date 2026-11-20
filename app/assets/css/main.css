@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Cinzel:wght@400..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-siliguri: "Hind Siliguri", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-instrument: "Instrument Serif", sans-serif;
+  --font-italiano: "Italianno", cursive;
+  --font-baskerville: "Baskerville", serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-boldonse: "Boldonse", serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --color-black-mid: #000000c7;
+  --color-primary: #1295ff;
+}
+
+:root {
+  --font-current: var(--font-inter);
+}
+
+html[lang="bn"] {
+  --font-current: var(--font-siliguri);
+}
+
+html[lang="en"] {
+  --font-current: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-current);
+}
+
+.primary-text {
+  @apply font-inter font-medium text-[18px];
+}
+.secondary-alpha-text {
+  @apply font-inter font-medium text-[28px];
+}
+
+.dashboard-header-text {
+  @apply font-inter font-semibold text-[24px];
+}
+
+.form-custom-label {
+  @apply font-inter text-sm font-medium;
+}

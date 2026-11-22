@@ -242,6 +242,7 @@ const state = reactive<{
   completedSteps: [],
 });
 
+const saveStatus = ref('Saved on this device');
 let isInitialized = false;
 
 const VALID_TEMPLATES = ['classic', 'modern', 'minimal', 'islamic'] as const;
@@ -290,6 +291,7 @@ export const useBiodataForm = () => {
 
   const saveToStorage = () => {
     if (typeof window === 'undefined') return;
+    saveStatus.value = 'Saving…';
     try {
       localStorage.setItem(
         STORAGE_KEY,
@@ -299,7 +301,9 @@ export const useBiodataForm = () => {
           completedSteps: state.completedSteps,
         })
       );
+      saveStatus.value = 'Saved on this device';
     } catch (e) {
+      saveStatus.value = 'Could not save — download a copy';
       console.error('Failed to save biodata state:', e);
     }
   };
@@ -444,6 +448,7 @@ export const useBiodataForm = () => {
   }
 
   return {
+    saveStatus: computed(() => saveStatus.value),
     biodata: state.biodata,
     errors: computed(() => state.errors),
     currentStep: computed({

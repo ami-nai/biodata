@@ -94,7 +94,7 @@ const displayHeight = computed(() => {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
       <div class="flex flex-col gap-2">
         <label class="text-sm font-medium text-slate-700 font-inter">
-          Height: <span class="text-primary font-semibold">{{ displayHeight }}</span> *
+          Height: <span class="text-primary font-semibold">{{ displayHeight }}</span>
         </label>
         <USlider
           v-model="biodata.identity.height"
@@ -156,6 +156,7 @@ const displayHeight = computed(() => {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <InputWithLabel
         label="Contact Number"
+        type="tel"
         v-model="biodata.identity.contact_num"
         placeholder="Enter phone number"
         :error="errors['contact_num']"
@@ -163,6 +164,7 @@ const displayHeight = computed(() => {
 
       <InputWithLabel
         label="WhatsApp Number"
+        type="tel"
         v-model="biodata.identity.whatsapp_num"
         placeholder="Enter WhatsApp number"
         :error="errors['whatsapp_num']"

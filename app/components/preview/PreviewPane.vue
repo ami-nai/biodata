@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
+import { computed, ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import { useBiodataForm } from '~/features/biodata/hooks/useBiodataForm';
 import { generateBiodataPdf } from '~/features/biodata/services/pdfGenerator';
 import ClassicTemplate from '~/templates/classic/ClassicTemplate.vue';
@@ -7,6 +7,11 @@ import ModernTemplate from '~/templates/modern/ModernTemplate.vue';
 import MinimalTemplate from '~/templates/minimal/MinimalTemplate.vue';
 import IslamicTemplate from '~/templates/islamic/IslamicTemplate.vue';
 
+const props = defineProps<{ fullscreen?: boolean }>();
+const emit = defineEmits(['edit']);
+const zoom = ref(false);
+const downloadStatus = ref('');
+const exportContainerRef = ref<HTMLElement | null>(null);
 const { biodata } = useBiodataForm();
 const isGenerating = ref(false);
 const pdfContainerRef = ref<HTMLElement | null>(null);
@@ -49,14 +54,18 @@ const templateMap: Record<string, object> = {
 const activeTemplate = computed(() => templateMap[biodata.selectedTemplate] ?? ClassicTemplate);
 
 const handleDownload = async () => {
-  if (!pdfContainerRef.value || isGenerating.value) return;
+  if (!exportContainerRef.value || isGenerating.value) return;
+  downloadStatus.value = 'Preparing your PDF…';
+  await nextTick();
   isGenerating.value = true;
   try {
     const name = biodata.identity.full_name || 'biodata';
     const filename = `${name.toLowerCase().replace(/\s+/g, '-')}-cv.pdf`;
-    await generateBiodataPdf(pdfContainerRef.value, filename);
+    await generateBiodataPdf(exportContainerRef.value, filename);
+    downloadStatus.value = 'Your PDF is ready. Check your downloads.';
   } catch (e) {
     console.error('Download failed:', e);
+    downloadStatus.value = 'Could not create the PDF. Please try again.';
   } finally {
     isGenerating.value = false;
   }
@@ -64,52 +73,32 @@ const handleDownload = async () => {
 </script>
 
 <template>
-  <div class="min-w-0 space-y-6">
-    <!-- Controls header -->
-    <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex flex-wrap justify-between items-center gap-4">
-      <div class="flex flex-wrap items-center gap-2 w-full min-w-0">
-        <label class="text-sm font-semibold text-slate-700 font-inter whitespace-nowrap">Template Style:</label>
-        <USelectMenu
-          v-model="biodata.selectedTemplate"
-          :items="templateOptions"
-          value-key="value"
-          label-key="label"
-          class="min-w-0 flex-1 font-inter"
-        />
-      </div>
-
-      <UButton
-        @click="handleDownload"
-        :loading="isGenerating"
-        icon="i-lucide-download"
-        variant="solid"
-        color="success"
-        class="font-inter w-full sm:w-auto"
-      >
-        Download Biodata PDF
-      </UButton>
+  <section :class="fullscreen ? 'preview-fullscreen' : 'preview-panel'">
+    <div class="preview-toolbar">
+      <h2 v-if="!fullscreen">Your document</h2>
+      <UButton v-if="fullscreen" color="neutral" variant="ghost" @click="emit('edit')">Back to details</UButton>
+      <UButton color="neutral" variant="outline" :aria-pressed="zoom" @click="zoom = !zoom">{{ zoom ? 'Fit to width' : 'Zoom in' }}</UButton>
+      <label class="sr-only" :for="fullscreen ? 'mobile-template' : 'desktop-template'">Layout</label>
+      <USelectMenu :id="fullscreen ? 'mobile-template' : 'desktop-template'" v-model="biodata.selectedTemplate" :items="templateOptions" value-key="value" label-key="label" class="w-full" />
     </div>
-
-    <!-- Scale the preview to its column while retaining full-size PDF content. -->
-    <div ref="previewViewportRef" class="w-full min-w-0 overflow-hidden flex justify-center py-4 bg-slate-100 rounded-2xl border border-slate-200">
-      <!-- Reserve the scaled dimensions so long pages remain fully scrollable. -->
-      <div
-        class="relative flex-shrink-0"
-        :style="{ width: `${pageWidth * previewScale}px`, height: `${pageHeight * previewScale}px` }"
-      >
-        <div class="absolute top-0 left-0 origin-top-left bg-white shadow-xl" :style="{ transform: `scale(${previewScale})` }">
-        <div ref="pdfContainerRef" class="w-[794px] min-h-[1123px] p-1 bg-white select-none">
-          <ClientOnly>
-            <KeepAlive>
-              <component
-                :is="activeTemplate"
-                :data="biodata"
-              />
-            </KeepAlive>
-          </ClientOnly>
+    <div ref="previewViewportRef" class="preview-frame" tabindex="0" aria-label="Document preview. Zoom in to read and scroll to inspect the whole document.">
+      <div class="relative mx-auto" :style="{ width: `${pageWidth * (zoom ? 1 : previewScale)}px`, height: `${pageHeight * (zoom ? 1 : previewScale)}px` }">
+        <div class="absolute top-0 left-0 origin-top-left" :style="{ transform: `scale(${zoom ? 1 : previewScale})` }">
+          <div ref="pdfContainerRef" class="w-[794px] min-h-[1123px] p-1 bg-white select-none" style="font-family:Inter,sans-serif">
+            <ClientOnly><component :is="activeTemplate" :data="biodata" /></ClientOnly>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="preview-footer">
+      <p class="preview-status" role="status">{{ downloadStatus || 'Check every detail before downloading.' }}</p>
+      <UButton :loading="isGenerating" :disabled="isGenerating" @click="handleDownload">{{ isGenerating ? 'Preparing PDF…' : 'Download PDF' }}<UIcon name="i-lucide-download" /></UButton>
+    </div>
+    <!-- A mounted, unscaled copy keeps the PDF independent of preview zoom and scrolling. -->
+    <div aria-hidden="true" inert style="position:fixed; left:-10000px; top:0; pointer-events:none; width:794px;">
+      <div ref="exportContainerRef" class="w-[794px] min-h-[1123px] p-1 bg-white select-none" style="font-family:Inter,sans-serif">
+        <ClientOnly><component :is="activeTemplate" :data="biodata" /></ClientOnly>
       </div>
     </div>
-  </div>
+  </section>
 </template>

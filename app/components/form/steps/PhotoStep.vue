@@ -122,7 +122,7 @@ const visibilityOptions = ['Public', 'Private (Registered Users Only)', 'Premium
     <!-- Profile Photo Upload -->
     <div class="space-y-3 bg-slate-50 p-6 rounded-xl border border-slate-200">
       <label class="text-sm font-semibold text-slate-700 font-inter block">
-        Profile Photo <span class="text-red-500">*</span>
+        Profile Photo 
       </label>
       
       <div class="flex flex-col sm:flex-row items-center gap-6">

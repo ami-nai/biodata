@@ -52,3 +52,12 @@ body {
 .form-custom-label {
   @apply font-inter text-sm font-medium;
 }
+
+@theme static {
+  --font-editor: 'Form Sans', sans-serif;
+  --font-editor-heading: Georgia, 'Form Sans', serif;
+  --color-paper: #faf8f3;
+  --color-ink: #292e29;
+  --color-forest: #245441;
+  --color-highlight: #886b29;
+}

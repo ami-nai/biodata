@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useId } from 'vue';
+const inputId = useId();
 const props = defineProps({
   label: {
     type: String,
@@ -48,15 +50,18 @@ const updateValue = (val: any) => {
 <template>
   <div class="flex flex-col gap-1.5 w-full">
     <div class="flex justify-between items-center">
-      <label class="text-sm font-medium text-slate-700 font-inter">
+      <label :for="inputId" class="text-sm font-medium text-slate-700 font-inter">
         {{ label }}
-        <span v-if="!isOptional" class="text-red-500">*</span>
+        
       </label>
       <span v-if="isOptional" class="text-xs text-slate-400 font-inter italic">Optional</span>
     </div>
 
     <!-- Nuxt UI Select Menu for premium search/create/multiselect experiences -->
     <USelectMenu
+      :id="inputId"
+      :aria-invalid="!!error"
+      :aria-describedby="error ? `${inputId}-error` : undefined"
       :model-value="modelValue"
       @update:model-value="updateValue"
       @create="(value: string) => updateValue(multiple ? [...(Array.isArray(modelValue) ? modelValue : []), value] : value)"
@@ -66,9 +71,9 @@ const updateValue = (val: any) => {
       :multiple="multiple"
       :create-item="allowCreate"
       :color="error ? 'error' : 'neutral'"
-      class="font-inter w-full min-w-[240px]"
+      class="font-inter w-full min-w-0"
     />
 
-    <p v-if="error" class="text-xs text-red-500 font-inter mt-0.5">{{ error }}</p>
+    <p :id="`${inputId}-error`" v-if="error" class="text-xs text-red-500 font-inter mt-0.5">{{ error }}</p>
   </div>
 </template>
